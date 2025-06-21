@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # IMDb Top 250 Movies Scraper
 
 This repository contains an automated workflow to scrape and update the IMDb Top 250 movies list.
@@ -54,9 +54,5 @@ The workflow is defined in [`.github/workflows/imdb_top_250.yaml`](./.github/wor
 MIT License
 
 ---
-
-**Maintainer:**  
-sadaramsimhadri@gmail.com  
-23f2002520@ds.study.iitm.ac.in
 =======
 
