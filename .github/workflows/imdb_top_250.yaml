@@ -22,7 +22,7 @@ jobs:
               uv run --with httpx,lxml,cssselect python scrape_movies.py
               
           - name: Set git user email 23f2002520@ds.study.iitm.ac.in
-            run: git config --local user.name "sadaramsimhadri@gmail.com
+            run: git config --local user.name "sadaramsimhadri@gmail.com"
 
           - name: Commit and push changes
             run: |
