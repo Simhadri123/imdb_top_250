@@ -1,0 +1,32 @@
+name: Top 250 IMDB Movies
+
+on:
+    schedule:
+        - cron: "0 * * * *"
+    workflow_dispatch:
+
+jobs:
+    imdb_top_250:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v2
+      
+          - name: Install uv
+            uses: astral-sh/uv@v5
+      
+          - name: Run scraper
+            run: |
+              uv run --with httpx,lxml,cssselect python scrape_movies.py
+              
+          - name: Set git user email 23f2002520@ds.study.iitm.ac.in
+            run: git config --local user.name "sadaramsimhadri@gmail.com
+
+          - name: Commit and push changes
+            run: |
+                  git config --local user.name "github-actions[bot]"
+                  git add *.json
+                  git commit -m "Update IMDb Top 250 data [skip ci]" || exit 0
+                  git push
