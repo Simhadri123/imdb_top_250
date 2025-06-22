@@ -2,7 +2,7 @@ name: Top 250 IMDB Movies
 
 on:
     schedule:
-        - cron: "40 16 * * *"
+        - cron: "15 11 * * *"
     workflow_dispatch:
 
 jobs:
